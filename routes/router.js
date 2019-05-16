@@ -23,7 +23,7 @@ async function createQueue() {
       let restoredItem = await consumer.process(QueueItems, job);
 
       // Return item to queue if restored
-      restoredItem ? queue.push(item) : null;
+      restoredItem ? queue.push(restoredItem) : null;
     }
 
     if (queue.length <= 0) {
