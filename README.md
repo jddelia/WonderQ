@@ -32,4 +32,4 @@ There is a bug which can occur, if system crashes, after setting the "active:tru
 
 ## Scaling
 
-This system can be scaled by adding more servers.
+This system can be scaled by adding more servers and balancing traffic, to handle increased load. It can also be scaled vertically, by increasing server capacity. 

@@ -31,7 +31,6 @@ async function createQueue() {
       clearInterval(processingInterval);
     }
   }, 10000);
-
 }
 
 // Routes
@@ -67,7 +66,7 @@ router.post('/new/message', async (req, res) => {
   // Save item to, send as confirmation
   const savedItem = await item.save();
 
-
+  // Put function in callback queue
   setTimeout(() => {
     createQueue();
   }, 0);
