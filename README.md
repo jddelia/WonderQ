@@ -33,4 +33,4 @@ There is a bug which can occur, if system crashes, after setting the "active:tru
 
 ## Scaling
 
-This system can be scaled by adding more server
+This system can be scaled by adding more servers.
