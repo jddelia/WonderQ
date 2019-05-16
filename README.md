@@ -24,8 +24,7 @@ This endpoint returns all the active items, currently in the queue.
 
 `POST: /new/message`
 
-This endpoint adds a new message into the queue, and it returns { messageId: <id> }
-Content-Type: application/x-www-form-urlencoded.
+This endpoint adds a new message into the queue, and it returns { messageId: "id" }. Content-Type: application/x-www-form-urlencoded.
 
 ### Known Issues
 
