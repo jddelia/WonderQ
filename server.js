@@ -12,7 +12,9 @@ mongoose.connect(`mongodb://admin:admin123@ds157276.mlab.com:57276/wonderq`)
   });
 
 // Middleware
+app.use(helmet());
 app.use(bodyParser.urlencoded({extended: true}));
+app.use(cors());
 
 // Routes
 app.use('/', router);
