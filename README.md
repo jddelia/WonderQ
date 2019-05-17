@@ -24,7 +24,7 @@ This endpoint returns all the active items, currently in the queue.
 
 `POST: /new/message`
 
-This endpoint adds a new message into the queue, and it returns { messageId: "id" }. Content-Type: application/x-www-form-urlencoded. Message is deleted after 8 seconds.
+This endpoint adds a new message into the queue, and it returns { messageId: "id" }. Content-Type: application/x-www-form-urlencoded. Message is processed after 8 seconds.
 
 ### Known Issues
 
