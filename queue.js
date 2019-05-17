@@ -25,7 +25,7 @@ async function createQueue() {
       console.log('DONE')
       clearInterval(processingInterval);
     }
-  }, 10000);
+  }, 8000);
 }
 
 module.exports = createQueue;
