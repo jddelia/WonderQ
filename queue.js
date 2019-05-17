@@ -8,7 +8,7 @@ async function createQueue() {
   const items = await QueueItems.find({ active: false });
   queue = [...items];
 
-  const processingInterval = setInterval(async () => {
+  const processingTimeout = setTimeout(async () => {
 
     // process all messages
     while (queue.length > 0) {
@@ -23,7 +23,6 @@ async function createQueue() {
 
     if (queue.length <= 0) {
       console.log('DONE')
-      clearInterval(processingInterval);
     }
   }, 8000);
 }
