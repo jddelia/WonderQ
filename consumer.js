@@ -6,7 +6,7 @@ const consumer = {
 
     const procItem = await db.findOneAndUpdate({ messageId: job.messageId }, { active: true });
     //console.log(item)
-    console.log(`Item ${item.messageId} processing`);
+    console.log(`Item ${procItem.messageId} processing`);
 
     const processTime = new Date().getTime();
     const artificalTime = new Date().getTime() + 20000;
@@ -18,11 +18,11 @@ const consumer = {
 
     if (endTime > start + 10000) {
       const restoredItem = await db.findOneAndUpdate({ messageId: job.messageId }, { active: false })
-      console.log(`Item ${item.messageId} restored`);
+      console.log(`Item ${restoredItem.messageId} restored`);
       return item;
     } else {
       const deletedItem = await db.findByIdAndRemove({ _id: item._id});
-      console.log(`Item ${item.messageId} deleted`);
+      console.log(`Item ${deletedItem.messageId} deleted`);
     }
   }
 }
